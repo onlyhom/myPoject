@@ -28,31 +28,31 @@
         <div class="line"></div>
     </div>
     <div class="cell">
-        <a href="#" data-page-slug="mission">
+        <a href="#" class="js-page-transition" data-page-slug="mission">
             About
         </a>
         <div class="line"></div>
     </div>
     <div class="cell">
-        <a href="#" data-page-slug="action">
+        <a href="#" class="js-page-transition" data-page-slug="action">
             Work
         </a>
         <div class="line"></div>
     </div>
     <div class="cell">
-        <a href="#" data-page-slug="solution">
+        <a href="#" class="js-page-transition" data-page-slug="solution">
             Blog
         </a>
         <div class="line"></div>
     </div>
     <div class="cell">
-        <a href="#" data-page-slug="company">
+        <a href="#" class="js-page-transition" data-page-slug="company">
             Notes
         </a>
         <div class="line"></div>
     </div>
     <div class="cell">
-        <a href="#" data-page-slug="recruit">
+        <a href="#" class="js-page-transition" data-page-slug="recruit">
             Contact
         </a>
         <div class="line"></div>
@@ -61,22 +61,23 @@
 </div>
 
 
+<header class="Header clear">
+    <h1 class="Logo"><a href="/"><img src="images/logo-header.png" alt="JAZY GROUP" width="168" height="44"></a></h1>
+    <nav class="Nav">
+        <ul>
+            <li><a class="js-page-transition" data-page-slug="mission" href="#"><span>About</span><div class="Nav__line"></div></a></li>
+            <li><a class="js-page-transition" data-page-slug="action" href="#"><span>Work</span><div class="Nav__line"></div></a></li>
+            <li><a class="js-page-transition" data-page-slug="solution" href="#"><span>Blog</span><div class="Nav__line"></div></a></li>
+            <li><a class="js-page-transition" data-page-slug="company" href="#"><span>Notes</span><div class="Nav__line"></div></a></li>
+            <li><a class="js-page-transition" data-page-slug="recruit" href="#"><span>Contact</span><div class="Nav__line"></div></a></li>
+        </ul>
+        <div class="menu-trigger"></div>
+    </nav>
+</header>
 
-<div class="wrap" style="transform: translate3d(-256px, 0px, 0px);">
 
-    <header class="Header clear">
-        <h1 class="Logo"><a href="/"><img src="images/logo-header.png" alt="JAZY GROUP" width="168" height="44"></a></h1>
-        <nav class="Nav">
-            <ul>
-                <li><a class="js-page-transition" data-page-slug="mission" href="#"><span>About</span><div class="Nav__line"></div></a></li>
-                <li><a class="js-page-transition" data-page-slug="action" href="#"><span>Work</span><div class="Nav__line"></div></a></li>
-                <li><a class="js-page-transition" data-page-slug="solution" href="#"><span>Blog</span><div class="Nav__line"></div></a></li>
-                <li><a class="js-page-transition" data-page-slug="company" href="#"><span>Notes</span><div class="Nav__line"></div></a></li>
-                <li><a class="js-page-transition" data-page-slug="recruit" href="#"><span>Contact</span><div class="Nav__line"></div></a></li>
-            </ul>
-            <div class="menu-trigger"></div>
-        </nav>
-    </header>
+
+<div class="wrap">
 
     <div class="Container">
     	<div class="Container__inner">
@@ -444,8 +445,37 @@ $('.pop .content').click(function(){
 });
 
 
+var isMenuOpen = false;
+$('.menu-trigger').on('click',function(){
+    var canvasBG = document.getElementById('jsCanvas');
+    if(isMenuOpen){
+        isMenuOpen=!isMenuOpen;
+        $(this).removeClass('on');
+        $('.wrap').removeClass('on');
+        $('.Header').removeClass('on');
+        canvasBG.style.transform = canvasBG.style.transform.split(' ')[3];
+    }else{
+        isMenuOpen=!isMenuOpen;
+        $(this).addClass('on');
+        $('.wrap').addClass('on');
+        $('.Header').addClass('on');
+        canvasBG.style.transform = 'translate3d(-256px, 0px, 0px) ' + canvasBG.style.transform;
+    }
+});
+
+
+$('.mobile-menu').on('click',function(){
+    var canvasBG = document.getElementById('jsCanvas');
+    isMenuOpen=!isMenuOpen;
+    $('.menu-trigger').removeClass('on');
+    $('.wrap').removeClass('on');
+    $('.Header').removeClass('on');
+    canvasBG.style.transform = canvasBG.style.transform.split(' ')[3];
+});
+
 
 $('.fullHeight').css('height',$(window).height()-$('.Header').height()-50);
+
 
 
 
