@@ -1,2 +1,2 @@
 # myPoject   
-Record some of my trivial projects
+Record some of my projects
