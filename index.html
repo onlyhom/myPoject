@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1,user-scalable=no">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href='css/bootstrap.css' type="text/css"/>
-<link rel="stylesheet" href='css/bootstrap-reset.css' type="text/css"/>
+<link rel="stylesheet" href='css/bootstrap.reset.css' type="text/css"/>
 <link rel="stylesheet" href='css/style.css' type="text/css" />
 <link rel="stylesheet" href='css/work.css' type="text/css" />
 <link rel="stylesheet" href="css/jquery.scrollSection.css" type="text/css" />
@@ -86,24 +86,38 @@
         	=====================-->
         	<article id="JsFirstBlock" class="FirstBlock fullHeight">
                 <div class="FirstBlock__inner">
-            		<h2 class="FirstBlock__logo"><span><img src="images/logo.png" alt="JAZY GROUP"></span></h2>
-            		<ul class="FirstBlock__items">
-            			<li class="FirstBlock__item"><div class="FirstBlock__item-inner">
-            				<h3><img src="images/mission.png" alt="MISSION" width="123" height="20"></h3>
-            				<p>关于我<br>欧丽红<br>技能树</p>
-            				<a class="smoothing js-page-transition" data-page-slug="mission" href="#">DETAIL</a>
-            			</div></li>
-            			<li class="FirstBlock__item"><div class="FirstBlock__item-inner">
-            				<h3><img src="images/action.png" alt="IDENTITIY" width="140" height="20"></h3>
-            				<p>PC/移动端<br>响应式<br>其他作品</p>
-            				<a class="smoothing js-page-transition" data-page-slug="action" href="#">DETAIL</a>
-            			</div></li>
-            			<li class="FirstBlock__item"><div class="FirstBlock__item-inner">
-            				<h3><img src="images/solution.png" alt="SOLUTION" width="153" height="20"></h3>
-            				<p>技能博客<br>旅游见闻<br>生活感悟</p>
-            				<a class="smoothing js-page-transition" data-page-slug="solution" href="#">DETAIL</a>
-            			</div></li>
-            		</ul>
+
+                    <div class="pc-end">
+                        <h2 class="FirstBlock__logo"><span><img src="images/logo.png" alt=""></span></h2>
+                        <ul class="FirstBlock__items">
+                            <li class="FirstBlock__item"><div class="FirstBlock__item-inner">
+                                <h3><img src="images/mission.png" alt="MISSION" width="123" height="20"></h3>
+                                <p>关于我<br>欧丽红<br>技能树</p>
+                                <a class="smoothing js-page-transition" data-page-slug="mission" href="#">DETAIL</a>
+                            </div></li>
+                            <li class="FirstBlock__item"><div class="FirstBlock__item-inner">
+                                <h3><img src="images/action.png" alt="IDENTITIY" width="140" height="20"></h3>
+                                <p>PC/移动端<br>响应式<br>其他作品</p>
+                                <a class="smoothing js-page-transition" data-page-slug="action" href="#">DETAIL</a>
+                            </div></li>
+                            <li class="FirstBlock__item"><div class="FirstBlock__item-inner">
+                                <h3><img src="images/solution.png" alt="SOLUTION" width="153" height="20"></h3>
+                                <p>技能博客<br>旅游见闻<br>生活感悟</p>
+                                <a class="smoothing js-page-transition" data-page-slug="solution" href="#">DETAIL</a>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <div class="mobile-end">
+                        <div class="firstBlock-mobile-logo">
+                            <img src="images/logo-color.png" alt="">
+                        </div>
+                        <div class="firstBlock-mobile-text">
+                            When eight o'clock in the morning, <br>one-third of the day is past.
+                        </div>
+                    </div>
+
+
             	</div>
 
         	</article>
@@ -113,7 +127,7 @@
             =====================-->
             <article id="JsMissionBlock" class="Mission Box">
                 <div class="Box__cell is-left">
-                    <div class="Box__inner">
+
                         <p class="Box__pagename">
                             ABOUT ME
                         </p>
@@ -128,7 +142,7 @@
                             <p>兴趣特长：摄影、视频剪辑、平面、瑜伽</p>
                             <img src="images/myphoto.jpg" alt="" class="myphoto"/>
                         </div>
-                    </div>
+
                 </div>
 
 
@@ -200,58 +214,55 @@
             </article>
 
             <!-- =====================
-                Solution
+                Solution -> Work
             =====================-->
             <article id="JsSolutionBlock" class="Solution Box">
                 <div class="Box__cell is-right">
-                    <div class="Box__inner">
-                        <p class="Box__pagename"><img src="images/name-solution.png" height="19" width="161" alt="SOLUTION"></p>
-                        <h2 class="Box__headline"><img src="images/catch-solution.png" height="40" width="690" alt="知財+デザイン+WEBマーケティング"></h2>
-                        <p class="Box__lead">私たちは多様化するニーズにお応えするべく、６つのソリューションを組み合わせてご提供しています。<br>経営者の意志を具現化する為、知財及びブランディング戦略からWEBマーケティング、WEB制作の戦術まで、
-                            勝ち抜くための総合サポートをしています。ITを活用した地域創生ソリューションにも注力しています。</p>
-                        <div class="Box__section">
-                            <dl>
-                                <dt>
-                                    <img src="images/icon-intel.png" height="70" width="70" alt=""><br>
-                                    知的財産</dt>
-                                <dd>豊富な経験と業界TOPクラスの実績。知財（商標、特許、実用新案、意匠）の権利化から知財を経営に活かすコンサルまで、知財戦略について専門的で幅広いサポートをいたします。</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <img src="images/icon-consul.png" height="70" width="70" alt=""><br>
-                                    ブランディング
-                                </dt>
-                                <dd>伝えたい方に、分かりやすく伝える。CI ・VI構築、経営・企画支援など、事業を効果的・能率的に進めるためのブランディングを行い、ブランド価値を高めます。</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <img src="images/icon-design.png" height="70" width="70" alt=""><br>
-                                    グラフィックデザイン
-                                </dt>
-                                <dd>想いをカタチに。コーポレートマーク、ロゴマークのデザイン、名刺やパンフレットのデザイン、出版物の制作など、デザインが持つ力で新たな世界観を創り上げます。</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <img src="images/icon-plan.png" height="70" width="70" alt=""><br>
-                                    WEBマーケティング
-                                </dt>
-                                <dd>経営にインパクトを与えるWEB集客力は緻密な分析から。WEB検索市場（ビッグデータ）の分析、WEBサイト流入分析、SEM・SEO対策により、WEB集客力を飛躍的に高めます。</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <img src="images/icon-web.png" height="70" width="70" alt=""><br>
-                                    WEB制作
-                                </dt>
-                                <dd>WEB制作は目的を明確に。ブランディングサイト（コーポレート・製品サイト等）の制作から集客サイト（LP・EC・プロモーション等）の制作まで、WEB制作を戦略的にサポートいたします。</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <img src="images/icon-japan.png" height="70" width="70" alt=""><br>
-                                    地方創生
-                                </dt>
-                                <dd>地方創生は地域を愛する心から。地域ブランディングを目的とした地域WEBプラットフォームを構築し、地域に息づく人々の物語を発信することで地域活性化をサポートをしています。</dd>
-                            </dl>
+                    <div class="Box__inner text-list">
+                        <div class="cell">
+                            <div class="date">
+                                <div class="day">04-21</div>
+                                <div class="year">2017</div>
+                            </div>
+                            <div class="title">标题标题标题标题标题标题标题标题标题标题标题标题</div>
+                            <div class="detail">
+                                文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情
+                            </div>
                         </div>
+
+                        <div class="cell">
+                            <div class="date">
+                                <div class="day">04-21</div>
+                                <div class="year">2017</div>
+                            </div>
+                            <div class="title">标题标题标题标题标题标题标题标题标题标题标题标题</div>
+                            <div class="detail">
+                                文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情
+                            </div>
+                        </div>
+
+                        <div class="cell">
+                            <div class="date">
+                                <div class="day">04-21</div>
+                                <div class="year">2017</div>
+                            </div>
+                            <div class="title">标题标题标题标题标题标题标题标题标题标题标题标题</div>
+                            <div class="detail">
+                                文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情
+                            </div>
+                        </div>
+
+                        <div class="cell">
+                            <div class="date">
+                                <div class="day">04-21</div>
+                                <div class="year">2017</div>
+                            </div>
+                            <div class="title">标题标题标题标题标题标题标题标题标题标题标题标题</div>
+                            <div class="detail">
+                                文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情文字详情
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </article> 
@@ -359,7 +370,7 @@
 
                     <div class="container">
                         <div class="Box__inner">
-                            <div class="Box__section">
+                            <div class="">
                                 <h3>CONTACT</h3>
                                 <h4>联系我</h4>
                                 <dl class="Recruit__mails">
@@ -474,7 +485,7 @@ $('.mobile-menu').on('click',function(){
 });
 
 
-$('.fullHeight').css('height',$(window).height()-$('.Header').height()-50);
+$('.fullHeight').css('height',$(window).height()-50);
 
 
 
