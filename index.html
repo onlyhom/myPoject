@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>‪onlyhom’s website / 欧丽红的个人主页</title>
+<title>‪onlyhom’s website</title>
 <!-- <meta name="viewport" content="width=1300"> -->
 <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1,user-scalable=no">
 <link rel="shortcut icon" href="favicon.ico">
@@ -432,32 +432,37 @@ $('.pop .content').click(function(){
 var isMenuOpen = false;
 $('.menu-trigger').on('click',function(){
     var canvasBG = document.getElementById('jsCanvas');
+    var fix_offset = parseFloat(canvasBG.style.transform.split(' ')[1]);
+    var transfrom_scale = canvasBG.style.transform.split(' ')[3];
+
     if(isMenuOpen){
         isMenuOpen=!isMenuOpen;
         $(this).removeClass('on');
         $('.wrap').removeClass('on');
         $('.Header').removeClass('on');
         removeCellAnimate();
-        canvasBG.style.transform = canvasBG.style.transform.split(' ')[3];
+        canvasBG.style.transform = 'translate3d(0px, '+fix_offset+'px, 0px) ' + transfrom_scale;
     }else{
         isMenuOpen=!isMenuOpen;
         $(this).addClass('on');
         $('.wrap').addClass('on');
         $('.Header').addClass('on');
         addCellAnimate();
-        canvasBG.style.transform = 'translate3d(-256px, 0px, 0px) ' + canvasBG.style.transform;
+        canvasBG.style.transform = 'translate3d(-256px, '+fix_offset+'px, 0px) ' + transfrom_scale;
     }
 });
 
 
 $('.mobile-menu').on('click',function(){
     var canvasBG = document.getElementById('jsCanvas');
+    var fix_offset = parseFloat(canvasBG.style.transform.split(' ')[1]);
+    var transfrom_scale = canvasBG.style.transform.split(' ')[3];
     isMenuOpen=!isMenuOpen;
     $('.menu-trigger').removeClass('on');
     $('.wrap').removeClass('on');
     $('.Header').removeClass('on');
     removeCellAnimate();
-    canvasBG.style.transform = canvasBG.style.transform.split(' ')[3];
+    canvasBG.style.transform = 'translate3d(0px, '+fix_offset+'px, 0px) ' + transfrom_scale;
 });
 
 
