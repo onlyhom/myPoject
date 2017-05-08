@@ -8,6 +8,12 @@ var swig = require('swig'); //加载模板处理模块
 
 var app = express(); //创建app应用 => NodeJS Http.createServer();
 
+//设置静态文件托管
+//当用户访问的url以/public开始 那么直接返回对应__dirname + '/public'下的文件
+
+
+
+
 //配置应用模板
 //参数1 模板引擎名称&模板文件后缀名
 //参数2 用于解析模板内容的方法
