@@ -10,7 +10,7 @@ var app = express(); //创建app应用 => NodeJS Http.createServer();
 
 //设置静态文件托管
 //当用户访问的url以/public开始 那么直接返回对应__dirname + '/public'下的文件
-
+app.use('/public', express.static(__dirname + '/public'));
 
 
 
