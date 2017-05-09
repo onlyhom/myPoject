@@ -24,6 +24,11 @@ app.set('view engine','html'); //设置需要使用的模板引擎
 //为了开发方便 暂时取消模板缓存
 swig.setDefaults({cache:false});
 
+//根据不同的功能划分模块
+app.use('/admin', require('./routers/admin'));
+app.use('/api', require('./routers/api'));
+// app.use('/', require('./routers/main'));
+
 
 // 首页
 app.get('/',function (req, res, next) { //request response next:函数
