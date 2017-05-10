@@ -1,14 +1,18 @@
 /**
- * Created by onlyhom on 2017/5/7.
+ * Created by onlyhom on 2017/5/9.
  */
+
 
 
 var express = require('express');//加载express模块
 var swig = require('swig'); //加载模板处理模块
 
+var mongoose = require('mongoose'); //加载数据库模块
+
+//加载数据库模块
 var app = express(); //创建app应用 => NodeJS Http.createServer();
 
-//设置静态文件托管
+//设置静态文件托管a
 //当用户访问的url以/public开始 那么直接返回对应__dirname + '/public'下的文件
 app.use('/public', express.static(__dirname + '/public'));
 
@@ -39,5 +43,6 @@ app.get('/',function (req, res, next) { //request response next:函数
 
 
 
+mongoose.connect();
 //监听http请求
 app.listen(8081);
