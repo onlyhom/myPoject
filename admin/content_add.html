@@ -11,10 +11,10 @@
 
 <form method="post">
     <div class="form-group">
-        <label for="categories">所属分类</label>
-        <select name="categories" id="categories" class="form-control">
-            {% for category in categories %}
-                <option name="catetory" id="category" value="{{ category.id }}">{{ category.name }}</option>
+        <label for="category">所属分类</label>
+        <select name="category" id="category" class="form-control">
+            {% for item in categories %}
+                <option name="item" id="item" value="{{ item.id }}">{{ item.name }}</option>
             {% endfor %}
         </select>
     </div>
