@@ -73,16 +73,71 @@
     </div>
     {% endif %}
 
-
+    <!--分类导航-->
     <nav>
         <div class="menu">
-            <a href="/" class="focus">首页</a>
-            {% for category in categories %}
-            <a href="/">{{ category.name }}</a>
+            {% if category == '' %}
+                <a href="/" class="on">首页</a>
+            {% else %}
+                <a href="/">首页</a>
+            {% endif %}
+
+            {% for item in categories %}
+                {% if category == item.id %}
+                    <a href="/?category={{ item.id }}" class="on">{{ item.name }}</a>
+                {% else %}
+                    <a href="/?category={{ item.id }}">{{ item.name }}</a>
+                {% endif %}
             {% endfor %}
         </div>
-
     </nav>
+
+    <div class="article-list">
+        {% for content in contents %}
+            <div class="cell">
+                <div class="title">{{ content.title }}</div>
+                <div class="info">
+                    <i>作者：{{ content.user.username }}</i>
+                    <i>时间：{{ content.addTime | date('Y-m-d H:i:s', -8*60) }}</i>
+                    <i>阅读：{{ content.views }}</i>
+                    <i>评论：10</i>
+                </div>
+                <div class="detail">
+                    {{ content.description }}
+                </div>
+                <a href="/view?contentid={{content.id}}">阅读全文</a>
+            </div>
+        {% endfor %}
+    </div>
+
+
+    <div class="pages row">
+        <div class="col-3" >
+            {% if page<=1 %}
+                <span>没有上一页了</span>
+            {% else %}
+                <a href="/?category={{ category }}&page={{ page-1 }}">上一页</a>
+            {% endif %}
+        </div>
+
+
+        <div class="col-6 text-show" >
+            {% if pages > 0 %}
+                {{page}} / {{pages}}
+            {% else %}
+                此分类下没有文章
+            {% endif %}
+        </div>
+
+        <div class="col-3 next" >
+            {% if page>=pages %}
+            <span>没有下一页了</span>
+            {% else %}
+            <a href="/?category={{ category }}&page={{ page+1 }}">下一页</a>
+            {% endif %}
+        </div>
+    </div>
+
 
 </body>
 </html>
