@@ -1,0 +1,162 @@
+@import url(common.less);
+
+@color:#0192ef;
+
+h1,h2,h3,h4,h5,h6,p{
+	font-size: 13px;
+}
+i{
+	font-style: normal;
+}
+p{
+	line-height: 20px;
+}
+a{
+	color:#666;
+}
+
+
+.work{
+	width:100%;
+	margin-bottom: 120px;
+	display:block;
+	a{
+		&:hover{
+			color: @color;
+		}	
+	}
+	.workTitle{
+		text-align: center;
+		img{
+			height:70px;
+		}
+	}
+
+	.activeProject{
+		margin: 70px -15px 20px;
+		.cover{
+			.zoomImage{
+				padding-bottom: 71%;
+			}
+		}
+		.infoDetail{
+			.cell{
+				width:100%;
+			}
+			.text{
+				// margin-bottom: 10px;
+				h1{
+					font-size: 20px;
+				}
+				h2{
+					padding:10px 0 20px;
+					a{
+						margin-right: 10px;
+						font-size: 14px;
+					}
+				}
+				p{
+					color:#666;
+					.nowrap2(3);
+				}
+			}
+			.urlCode{
+				.tips{
+					width:50%;
+					margin: 0 auto;
+					text-align: center;
+					color:#666;
+				}
+				.zoomImage{
+					width:50%;
+					margin: 0 auto;
+					padding-bottom: 50%;
+				}
+			}
+
+		}
+	}
+
+	.projectList{
+		.cell{
+			margin-bottom: 30px;
+			.zoomImage{
+				position:relative;
+				top:0;
+				padding-bottom: 71%;
+				box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+				cursor: pointer;
+				transition:all 0.4s;
+			}
+		}
+		.cell.on{
+			.zoomImage{
+				top:-13px;
+				box-shadow: 1px 3px 6px rgba(0,0,0,0.3);
+			}
+		}
+	}	
+}
+
+
+
+img{
+	max-width: 100%;
+}
+
+
+@media (max-width: 767px) {
+	.work{
+		margin-bottom: 70px;
+		.workTitle{
+			text-align: center;
+			img{
+				height:60px;
+			}
+		}
+
+		.activeProject{
+			.infoDetail{
+				.text{
+					margin-bottom: 20px;
+					h1{
+						font-size: 20px;
+					}
+					h2{
+						padding:10px 0 20px;
+						a{
+							margin-right: 10px;
+							font-size: 14px;
+						}
+					}
+					p{
+						color:#666;
+						.nowrap2(3);
+					}
+				}
+
+			}
+		}
+
+		.projectList{
+			display:none;
+			.cell{
+				margin-bottom: 30px;
+				.zoomImage{
+					position:relative;
+					top:0;
+					padding-bottom: 71%;
+					box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+					cursor: pointer;
+					transition:all 0.4s;
+				}
+			}
+			.cell.on{
+				.zoomImage{
+					top:-13px;
+					box-shadow: 1px 3px 6px rgba(0,0,0,0.3);
+				}
+			}
+		}	
+	}
+}

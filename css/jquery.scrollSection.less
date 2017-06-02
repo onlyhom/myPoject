@@ -1,0 +1,85 @@
+.clearfix() {
+    &:after {
+        content: ".";
+        display: block;
+        height:0;
+        clear:both;
+        visibility: hidden;
+    }
+}
+
+
+.viewOuter{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top:-45px;
+
+    // background: pink;
+    .goArrow{
+        text-align: center;
+        // background: orange;
+        height:45px;
+        line-height: 45px;
+        span{
+            display: inline-block;
+            vertical-align: middle;
+            width: 35px;
+            height: 20px;
+            background-image: url(../images/arrow-top.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            opacity: 0.5;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    .goNext{
+        span{
+            background-image: url(../images/arrow-bottom.png);
+        }
+    }
+    .viewShow{
+        position: relative;
+        width: 98%;
+        height: 0;
+        padding-bottom: 69.58%;
+        margin: 0 auto;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+    .viewContent{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        // width: 200%;
+        height:1200%;
+        width: 100%;
+        padding: 0;
+        ul{
+            display: block;
+            height: 100%;
+            //width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            .clearfix();
+            li{
+                //width: 50%;
+                display: block;
+                // height: 50%;
+                // float: left;
+                img{
+                    width: 100%; 
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+

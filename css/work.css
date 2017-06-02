@@ -1,0 +1,174 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.zoomImage {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+}
+.fixWidth {
+  width: 94%;
+  margin: 0 auto;
+}
+.fixWidthFlex {
+  width: 94%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.center {
+  text-align: center;
+}
+.fullPage {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: 13px;
+}
+i {
+  font-style: normal;
+}
+p {
+  line-height: 20px;
+}
+a {
+  color: #666;
+}
+.work {
+  width: 100%;
+  margin-bottom: 120px;
+  display: block;
+}
+.work a:hover {
+  color: #0192ef;
+}
+.work .workTitle {
+  text-align: center;
+}
+.work .workTitle img {
+  height: 70px;
+}
+.work .activeProject {
+  margin: 70px -15px 20px;
+}
+.work .activeProject .cover .zoomImage {
+  padding-bottom: 71%;
+}
+.work .activeProject .infoDetail .cell {
+  width: 100%;
+}
+.work .activeProject .infoDetail .text h1 {
+  font-size: 20px;
+}
+.work .activeProject .infoDetail .text h2 {
+  padding: 10px 0 20px;
+}
+.work .activeProject .infoDetail .text h2 a {
+  margin-right: 10px;
+  font-size: 14px;
+}
+.work .activeProject .infoDetail .text p {
+  color: #666;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.work .activeProject .infoDetail .urlCode .tips {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  color: #666;
+}
+.work .activeProject .infoDetail .urlCode .zoomImage {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 50%;
+}
+.work .projectList .cell {
+  margin-bottom: 30px;
+}
+.work .projectList .cell .zoomImage {
+  position: relative;
+  top: 0;
+  padding-bottom: 71%;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.work .projectList .cell.on .zoomImage {
+  top: -13px;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
+}
+img {
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .work {
+    margin-bottom: 70px;
+  }
+  .work .workTitle {
+    text-align: center;
+  }
+  .work .workTitle img {
+    height: 60px;
+  }
+  .work .activeProject .infoDetail .text {
+    margin-bottom: 20px;
+  }
+  .work .activeProject .infoDetail .text h1 {
+    font-size: 20px;
+  }
+  .work .activeProject .infoDetail .text h2 {
+    padding: 10px 0 20px;
+  }
+  .work .activeProject .infoDetail .text h2 a {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  .work .activeProject .infoDetail .text p {
+    color: #666;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .work .projectList {
+    display: none;
+  }
+  .work .projectList .cell {
+    margin-bottom: 30px;
+  }
+  .work .projectList .cell .zoomImage {
+    position: relative;
+    top: 0;
+    padding-bottom: 71%;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+  .work .projectList .cell.on .zoomImage {
+    top: -13px;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
+  }
+}
